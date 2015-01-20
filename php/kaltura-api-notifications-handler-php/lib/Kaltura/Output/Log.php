@@ -64,7 +64,7 @@ class Log extends Output
 		$fp = fopen($log->filePath, 'a');
 		
 		if ($fp === false) {
-			throw \Exception('Error while trying log.');
+			throw new \Exception('Error while trying log.');
 		}
 
 		fwrite($fp, self::toString($msg));
